@@ -106,6 +106,10 @@ def delete_product(id):
 
     return product_schema.jsonify(product)
 
+# Run a script
+@app.route('/cq')
+def dynamic_page():
+    return cq.printcq()
 
 # Run Server
 if __name__ == '__main__':
