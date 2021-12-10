@@ -7,24 +7,23 @@ app = FastAPI()
 
 output = {}
 
-X = np.array(
-    [[35, 30000], [45, 45000], [40, 50000], [35, 35000], [25, 32500], [40, 40000]]
-)
+# load data from csv
+X = np.loadtxt(open("houses.csv", "rb"), delimiter=",", skiprows=1).astype("int")
+print(X)
 
 ## One Liner
 KNN = KNeighborsRegressor(n_neighbors=3).fit(X[:, 0].reshape(-1, 1), X[:, 1])
-
+print(KNN)
 
 class knnx(BaseModel):
     sqm: int
-
 
 @app.post("/foo")
 def index(data: knnx):
 
     res = KNN.predict([[data.sqm]])
-    res = res[0]
-    res = "".join(str(res))
+    res = round(res[0],2)
+    #res = "".join(str(res))
     output["price"] = res
 
     return output
