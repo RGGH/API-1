@@ -1,0 +1,6 @@
+- front end
+- js
+- html
+- css
+- python
+- FastAPI
