@@ -9,4 +9,4 @@
 
 ---
 
-![screenshot]('https://github.com/RGGH/API-1/edit/main/Full_Project/ss_neural_net_ratings.png')
+![screenshot](https://github.com/RGGH/API-1/blob/main/Full_Project/ss_neural_net_ratings.png)
