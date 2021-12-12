@@ -25,3 +25,8 @@ for Dockerfile details
     RUN pip install -r requirements.txt
 
     CMD exec gunicorn --bind :$PORT --workers 1 --worker-class uvicorn.workers.UvicornWorker  --threads 8 main:app
+---
+    gcloud builds submit --tag gcr.io/PROJECT-ID/countries_fastapi
+---
+    gcloud run deploy --image gcr.io/bitnami-oyzgng8y5a/countries_fastapi --platform managed
+    
