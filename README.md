@@ -1,6 +1,10 @@
 # API-1
 API development - BEYOND CRUD - W.I.P
 
+---
+https://youtu.be/s61QFJkEaQU
+---
+
 https://tyk.io/blog/rest-never-crud/
 
 ---
